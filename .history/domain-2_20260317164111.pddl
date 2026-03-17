@@ -2,8 +2,9 @@
     (:requirements :adl :fluents)
 
     (:functions
-        (expiry-time ?i - item)
-        (time ?i - item)
+        (capacity ?c - courier)
+        (current-load ?c - courier)
+        (volume ?i - item)
     )
 
     (:types 
@@ -23,6 +24,7 @@
         (Order-cleared ?p - patient ?i - item)
         (Bought-gift)
         (Is-gift-shop ?x - node)
+        
 
     )
 
@@ -32,25 +34,21 @@
         :effect (and
         (Location-courier ?c ?n2)
         (not (Location-courier ?c ?n1))
-        (forall (?i - item)
-            (when (Picked-up ?i)
-                (increase (time ?i) 1)
-            )
-        )
     )
     
     )
-
+       
     (:action PICK-UP
         :parameters (?x - item ?loc - node ?courier - courier)
-        :precondition (and (not(Picked-up ?x)) (Location-courier ?courier ?loc) (Serves ?loc ?x))
-        :effect (and (Picked-up ?x) (assign (time ?x) 0))
+        :precondition (and (not(Picked-up ?x)) (Location-courier ?courier ?loc) (Serves ?loc ?x)
+            (<= (+ (current-load ?courier ) (volume ?x)) (capacity ?courier)))
+        :effect (and (Picked-up ?x) (increase(current-load ?courier) (volume ?x)))
     )
 
     (:action DELIVERY
         :parameters (?courier - courier ?x - item ?patient - patient ?loc - node)
-        :precondition (and (Location-courier ?courier ?loc) (Location-patient ?patient ?loc) (Order-placed ?patient ?x) (Picked-up ?x) (> (expiry-time ?x) (time ?x)) )
-        :effect (and (Order-cleared ?patient ?x) (not(Picked-up ?x)) )
+        :precondition (and (Location-courier ?courier ?loc) (Location-patient ?patient ?loc) (Order-placed ?patient ?x) (Picked-up ?x))
+        :effect (and (Order-cleared ?patient ?x) (not(Picked-up ?x)) (decrease (current-load ?courier) (volume ?x)) )
     )
 
     (:action BUY-GIFT

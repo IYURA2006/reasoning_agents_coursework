@@ -97,7 +97,6 @@
 
         (Connected N12 N17)
         (Connected N17 N12)
-        (Connecteed N13 N3)
 
         (Connected N12 gift-shop)
         (Connected gift-shop N12)

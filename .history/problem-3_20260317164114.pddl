@@ -20,6 +20,7 @@
         Green-dragon - patient
         Purple-dragon - patient
         Zog - courier
+        Gadabout - courier
 
         Peppermint - item
         Bandage - item
@@ -68,6 +69,7 @@
 
 
         (Location-courier Zog N9)
+        (Location-courier Gadabout N10)
         (Location-patient Blue-dragon N10)
         (Location-patient Pink-dragon N5)
         (Location-patient Green-dragon N7)
@@ -90,23 +92,15 @@
         (Order-placed Purple-dragon Healing-balm)
 
         (Is-gift-shop gift-shop)
+        (Is-princess N8)
 
-        (=(expiry-time Peppermint) 8)
-        (=(expiry-time Bandage) 6)
-        (=(expiry-time Plaster) 5)
-        (=(expiry-time Stethoscope) 7)
-        (=(expiry-time Cough-syrup) 6)
-        (=(expiry-time Healing-balm) 5)
-        (=(time Peppermint) 0)
-        (=(time Bandage) 0)
-        (=(time Plaster) 0)
-        (=(time Stethoscope) 0)
-        (=(time Cough-syrup) 0)
-        (=(time Healing-balm) 0)
+        (= (gifts-presented) 0)
+        (= (order-presents Zog) 0)
+        (= (order-presents Gadabout) 1)
     )
 
     (:goal
-        (bought-gift)
+        (and(gift-hand-over Zog) (gift-hand-over Gadabout))
     )
 
 
