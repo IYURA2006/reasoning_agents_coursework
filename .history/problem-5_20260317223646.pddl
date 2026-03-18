@@ -99,7 +99,7 @@
         (= (max-urgency Pink-dragon) 5)
         (= (time Green-dragon) 0)          
         (= (max-urgency Green-dragon) 7)
-        (= (time Purple-dragon) 0)
+        (= (time urple-dragon) 0)
         (= (max-urgency Purple-dragon) 6)
 
         
