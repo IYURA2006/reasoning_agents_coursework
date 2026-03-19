@@ -94,13 +94,13 @@
 
 
         (= (time Blue-dragon) 0)
-        (= (max-urgency Blue-dragon) 10)
+        (= (max-urgency Blue-dragon) 12)
         (= (time Pink-dragon) 0)
-        (= (max-urgency Pink-dragon) 5)
+        (= (max-urgency Pink-dragon) 17)
         (= (time Green-dragon) 0)          
-        (= (max-urgency Green-dragon) 7)
+        (= (max-urgency Green-dragon) 16)
         (= (time Purple-dragon) 0)
-        (= (max-urgency Purple-dragon) 6)
+        (= (max-urgency Purple-dragon) 13)
 
         
     )

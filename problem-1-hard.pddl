@@ -28,8 +28,7 @@
         Purple-dragon - patient
         Orange-dragon - patient
         Yellow-dragon - patient
-        Gold-dragon - patient
-        Red-dragon - patient
+
 
         Zog - courier
 
@@ -97,7 +96,7 @@
 
         (Connected N12 N17)
         (Connected N17 N12)
-        (Connecteed N13 N3)
+        (Connected N13 N3)
 
         (Connected N12 gift-shop)
         (Connected gift-shop N12)
@@ -111,8 +110,8 @@
         (Location-patient Purple-dragon N11)
         (Location-patient Orange-dragon N6)
         (Location-patient Yellow-dragon N8)
-        (Location-patient Gold-dragon N2)
-        (Location-patient Red-dragon N1)
+
+
 
 
         (Serves N15 Plaster)
@@ -125,36 +124,28 @@
 
         (Order-placed Blue-dragon Peppermint)
         (Order-placed Blue-dragon Bandage)
-        (Order-placed Blue-dragon Stethoscope)
+ 
 
         (Order-placed Pink-dragon Plaster)
         (Order-placed Pink-dragon Peppermint)
-        (Order-placed Pink-dragon Cough-syrup)
+
 
         (Order-placed Green-dragon Stethoscope)
-        (Order-placed Green-dragon Cough-syrup)
-        (Order-placed Green-dragon Peppermint)
+
+
 
         (Order-placed Purple-dragon Bandage)
-        (Order-placed Purple-dragon Healing-balm)
-        (Order-placed Purple-dragon Plaster)
+    
 
         (Order-placed Orange-dragon Plaster)
-        (Order-placed Orange-dragon Peppermint)
-        (Order-placed Orange-dragon Bandage)
+ 
+  
 
         (Order-placed Yellow-dragon Bandage)
         (Order-placed Yellow-dragon Stethoscope)
-        (Order-placed Yellow-dragon Healing-balm)
 
-        (Order-placed Gold-dragon Stethoscope)
-        (Order-placed Gold-dragon Peppermint)
-        (Order-placed Gold-dragon Cough-syrup)
 
-        (Order-placed Red-dragon Cough-syrup)
-        (Order-placed Red-dragon Stethoscope)
-        (Order-placed Red-dragon Plaster)
-
+  
 
         (Is-gift-shop gift-shop)
     )
